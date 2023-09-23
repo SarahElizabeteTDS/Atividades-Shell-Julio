@@ -1,0 +1,15 @@
+caminho=$1
+
+	if [ $# -eq 1 ]; then
+		for arq in `ls $caminho`
+		do
+		   if [ -d $arq ]; then
+		   	echo "$arq (dir)"
+		   else
+		   	echo "$arq"
+		   fi
+		done
+		
+	else
+		echo "Informe um parametro"
+	fi
