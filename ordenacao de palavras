@@ -1,0 +1,17 @@
+if [ $# -gt 0 ]; then
+ 
+ temp_arq=$(mktemp)
+	for palavra in "$@"; do
+   		echo "$palavra" >> "$temp_arq"
+  	done
+		sort_temp_arq=$(mktemp)
+  		sort "$temp_arq" > "$sort_temp_arq"
+		echo "O número de parametros informado é de: $#"
+  		
+  	while read -r palavra; do
+   		echo "$palavra"
+  	done < "$sort_temp_arq"
+  	rm "$temp_arq" "$sort_temp_arq"
+else
+  	echo "Número de parâmetros insuficiente." 
+fi
