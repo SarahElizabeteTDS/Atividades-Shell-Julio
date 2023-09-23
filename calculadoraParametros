@@ -1,3 +1,5 @@
+#!/bin/bash
+
 nm1=$1
 calculo=$2
 nm2=$3
