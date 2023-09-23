@@ -1,0 +1,59 @@
+nm1=$1
+operador=$2
+nm2=$3
+
+if [ $# -eq 1 ]; then
+	echo "informe o operador"
+	read operador
+
+	echo "informe o segundo número"
+	read nm2
+fi
+
+if [ $# -eq 2 ]; then
+	echo "informe o segundo número"
+	read nm2
+fi
+
+if [ $# -eq 0 ]; then
+	echo "informe o primeiro número"
+	read nm1
+	
+	echo "informe o operador"
+	read operador
+
+	echo "informe o segundo número"
+	read nm2
+fi
+
+
+if [ $operador = + ] ; then
+	
+	let resultado=nm1+nm2
+	echo "resultado: " $resultado
+fi
+
+if [ $operador = - ] ; then
+	
+	let resultado=nm1-nm2
+	echo "resultado: " $resultado
+fi
+
+if [ $operador = x ]; then
+	
+	let resultado=nm1*nm2
+	echo "resultado: " $resultado
+fi
+
+if [ $operador = / ]; then
+	
+	if [ nm2 -eq 0 ]; then
+	echo "ERRO: Divisão por zero"
+	
+	else 
+
+	let resultado=nm1/nm2
+	echo "resultado: " $resultado
+	
+	fi
+fi
