@@ -1,3 +1,5 @@
+#!/bin/bash
+
 arq=$1
 if [ -e $arq ]
 then
