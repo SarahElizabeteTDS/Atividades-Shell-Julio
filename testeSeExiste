@@ -1,0 +1,8 @@
+arq=$1
+if [ -e $arq ]
+then
+ tamanho=`ls -l $arq | cut -f 5 -d " "` 
+ echo O arquivo $arq existe, e seu tamanho é de $tamanho.
+else
+ echo O arquivo $arq não existe
+fi
